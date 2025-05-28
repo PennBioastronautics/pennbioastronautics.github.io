@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/Penn-BioAstro/static/css/main.07010334.css",
-    "main.js": "/Penn-BioAstro/static/js/main.6705d939.js",
+    "main.css": "/Penn-BioAstro/static/css/main.ae8c6290.css",
+    "main.js": "/Penn-BioAstro/static/js/main.42d89a0e.js",
+    "static/media/Radion.ttf": "/Penn-BioAstro/static/media/Radion.586bdaf5b3fa5a60f23d.ttf",
     "index.html": "/Penn-BioAstro/index.html",
-    "main.07010334.css.map": "/Penn-BioAstro/static/css/main.07010334.css.map",
-    "main.6705d939.js.map": "/Penn-BioAstro/static/js/main.6705d939.js.map"
+    "main.ae8c6290.css.map": "/Penn-BioAstro/static/css/main.ae8c6290.css.map",
+    "main.42d89a0e.js.map": "/Penn-BioAstro/static/js/main.42d89a0e.js.map"
   },
   "entrypoints": [
-    "static/css/main.07010334.css",
-    "static/js/main.6705d939.js"
+    "static/css/main.ae8c6290.css",
+    "static/js/main.42d89a0e.js"
   ]
 }
