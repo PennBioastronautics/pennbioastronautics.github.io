@@ -5,7 +5,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'radion': ['Radion', 'Space Grotesk', 'sans-serif'],
+        'custom-title': ['Radion', 'Space Grotesk', 'sans-serif'],
+        'sans': ['Inter', 'sans-serif'],
+      },
       colors: {
+        // Custom cream color
+        cream: '#FFE4BE',
         // Primary red colors
         primary: {
           50: '#fff1f1',

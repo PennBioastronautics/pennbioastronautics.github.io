@@ -37,7 +37,7 @@ const Navigation = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'glass-card backdrop-blur-xl' : 'bg-transparent'
+        scrolled ? 'bg-white/5 backdrop-blur-xl border-b border-white/10' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,14 +58,10 @@ const Navigation = () => {
             {/* Mobile - Short Logo with Text */}
             <div className="md:hidden flex items-center space-x-2">
               <img 
-                src={`${process.env.PUBLIC_URL}/images/shortlogo.png`}
+                src={`${process.env.PUBLIC_URL}/images/longlogo.png`}
                 alt="Penn Bioastronautics" 
-                className="h-10 w-10"
+                className="h-12 w-auto"
               />
-              <div>
-                <h1 className="text-lg font-bold cosmic-text">Penn Bioastronautics</h1>
-                <p className="text-xs text-gray-400">Biology for Space</p>
-              </div>
             </div>
           </motion.div>
 
@@ -77,9 +73,10 @@ const Navigation = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.href)}
-                className="flex items-center space-x-1 text-gray-300 hover:text-primary-400 transition-colors duration-200"
+                className="flex items-center space-x-1 hover:text-primary-400 transition-colors duration-200"
+                style={{ color: '#FFF9F0' }}
               >
-                <item.icon className="w-4 h-4" />
+                <item.icon className="w-4 h-4" style={{ color: '#FFE4BE' }} />
                 <span>{item.name}</span>
               </motion.button>
             ))}
@@ -89,7 +86,8 @@ const Navigation = () => {
           <motion.button
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-full glass-card"
+            className="md:hidden p-2 bg-white/5 backdrop-blur-md border border-white/10"
+            style={{ color: '#FFF9F0' }}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </motion.button>
@@ -103,7 +101,7 @@ const Navigation = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass-card border-t border-white/10"
+            className="md:hidden bg-white/5 backdrop-blur-md border-t border-white/10"
           >
             <div className="px-4 py-4 space-y-2">
               {navItems.map((item) => (
@@ -111,9 +109,10 @@ const Navigation = () => {
                   key={item.name}
                   whileHover={{ x: 10 }}
                   onClick={() => scrollToSection(item.href)}
-                  className="flex items-center space-x-3 w-full text-left p-3 rounded-full hover:bg-primary-500/10 transition-colors duration-200"
+                  className="flex items-center space-x-3 w-full text-left p-3 hover:bg-primary-500/10 transition-colors duration-200"
+                  style={{ color: '#FFE4BE' }}
                 >
-                  <item.icon className="w-5 h-5 text-primary-400" />
+                  <item.icon className="w-5 h-5" style={{ color: '#FFE4BE' }} />
                   <span>{item.name}</span>
                 </motion.button>
               ))}

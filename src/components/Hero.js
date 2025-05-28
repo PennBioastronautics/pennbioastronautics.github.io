@@ -1,21 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ChevronDown, Rocket, Dna, Globe, Star, Zap, Sparkles } from 'lucide-react';
+import { ChevronDown, Rocket, Dna, Globe, Sparkles } from 'lucide-react';
 
 const Hero = () => {
-  const [scrollY, setScrollY] = useState(0);
   const { scrollYProgress } = useScroll();
   
   // 3D perspective transforms for logo
   const logoY = useTransform(scrollYProgress, [0, 1], [0, -200]);
   const logoRotateX = useTransform(scrollYProgress, [0, 1], [0, 45]);
   const logoScale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const scrollToNext = () => {
     const element = document.querySelector('#about');
@@ -190,37 +183,40 @@ const Hero = () => {
           transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
           className="mb-12"
         >
-          <motion.h1 
-            className="text-6xl md:text-8xl lg:text-9xl font-black mb-8 leading-none"
+          <motion.h2
+            className="text-6xl md:text-8xl lg:text-7xl font-medium"
+            style={{ lineHeight: 1, margin: 0 }}
             initial={{ backgroundPosition: "0% 50%" }}
             animate={{ backgroundPosition: "100% 50%" }}
             transition={{ duration: 4, repeat: Infinity, repeatType: "reverse" }}
+          >
+            The Penn
+          </motion.h2>
+          <motion.h2 
+            className="text-6xl md:text-8xl lg:text-7xl font-medium text-white"
             style={{
-              background: "linear-gradient(45deg, #FF5C5E, #46A3FF, #FF7A7C, #6BB6FF)",
+              background: "linear-gradient(45deg, #FF5C5E, #46A3FF, #FF7A7C, #46A3FF)",
               backgroundSize: "200% 200%",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
             }}
-          >
-            PENN
-          </motion.h1>
-          <motion.h2 
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-10"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 1 }}
           >
-            BIOASTRONAUTICS
+            BioAstronautics
           </motion.h2>
-          
-          {/* Gentler Animated Underline */}
-          <motion.div
-            initial={{ width: 0, opacity: 0 }}
-            animate={{ width: "100%", opacity: 1 }}
-            transition={{ duration: 2.5, delay: 1.4 }}
-            className="h-1 bg-gradient-to-r from-primary-400 via-tertiary-400 to-primary-500 mx-auto max-w-2xl"
-          />
+          <motion.h2 
+            className="text-6xl md:text-8xl lg:text-7xl font-medium mb-10"
+            style={{ lineHeight: 1, margin: 0, color: '#FFE4BE' }}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 1 }}
+          >
+            Club
+          </motion.h2>
+
         </motion.div>
 
         {/* Enhanced Subtitle */}
@@ -230,11 +226,11 @@ const Hero = () => {
           transition={{ duration: 1, delay: 1.8 }}
           className="mb-20"
         >
-          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed font-light">
-            Pioneering the future of <span className="text-primary-300 font-semibold">space biology</span> and 
-            <span className="text-tertiary-300 font-semibold"> human exploration</span> beyond Earth
+          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed font-light" style={{ color: '#FFF9F0' }}>
+            Pioneering the future of <span className="text-primary-500 font-semibold">space biology</span> and 
+            <span className="text-tertiary-500 font-semibold"> human exploration</span> beyond Earth
           </p>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: '#FFF9F0' }}>
             University of Pennsylvania's premier organization for bioastronautics research and innovation
           </p>
         </motion.div>
@@ -256,11 +252,11 @@ const Hero = () => {
                 transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
                 className="absolute inset-0 w-18 h-18 bg-gradient-to-r from-primary-400 to-primary-500 blur-lg opacity-30 group-hover:opacity-50 transition-opacity"
               />
-              <div className="relative w-18 h-18 bg-gradient-to-r from-primary-400 to-primary-500 flex items-center justify-center shadow-2xl">
+              <div style={{padding: '10px', borderRadius: '10px'}}  className="relative w-18 h-18 bg-gradient-to-r from-primary-400 to-primary-500 flex items-center justify-center shadow-2xl">
                 <Rocket className="w-9 h-9 text-white" />
               </div>
             </div>
-            <span className="text-lg font-semibold text-gray-300 group-hover:text-white transition-colors">Space Technology</span>
+            <span className="text-lg font-semibold group-hover:text-white transition-colors" style={{ color: '#FFF9F0' }}>Space Technology</span>
           </motion.div>
           
           <motion.div
@@ -273,11 +269,11 @@ const Hero = () => {
                 transition={{ duration: 7, repeat: Infinity, ease: "linear" }}
                 className="absolute inset-0 w-18 h-18 bg-gradient-to-r from-tertiary-400 to-tertiary-500 blur-lg opacity-30 group-hover:opacity-50 transition-opacity"
               />
-              <div className="relative w-18 h-18 bg-gradient-to-r from-tertiary-400 to-tertiary-500 flex items-center justify-center shadow-2xl">
+              <div style={{padding: '10px', borderRadius: '10px'}} className="relative w-18 h-18 bg-gradient-to-r from-tertiary-400 to-tertiary-500 flex items-center justify-center shadow-2xl">
                 <Dna className="w-9 h-9 text-white" />
               </div>
             </div>
-            <span className="text-lg font-semibold text-gray-300 group-hover:text-white transition-colors">Biology Research</span>
+            <span className="text-lg font-semibold group-hover:text-white transition-colors" style={{ color: '#FFF9F0' }}>Biology Research</span>
           </motion.div>
           
           <motion.div
@@ -290,11 +286,11 @@ const Hero = () => {
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute inset-0 w-18 h-18 bg-gradient-to-r from-secondary-500 to-secondary-600 blur-lg opacity-30 group-hover:opacity-50 transition-opacity"
               />
-              <div className="relative w-18 h-18 bg-gradient-to-r from-secondary-500 to-secondary-600 flex items-center justify-center shadow-2xl">
+              <div style={{padding: '10px', borderRadius: '10px'}} className="relative w-18 h-18 bg-gradient-to-r from-secondary-500 to-secondary-600 flex items-center justify-center shadow-2xl">
                 <Globe className="w-9 h-9 text-white" />
               </div>
             </div>
-            <span className="text-lg font-semibold text-gray-300 group-hover:text-white transition-colors">Space Exploration</span>
+            <span className="text-lg font-semibold group-hover:text-white transition-colors" style={{ color: '#FFF9F0' }}>Space Exploration</span>
           </motion.div>
         </motion.div>
 
@@ -309,10 +305,10 @@ const Hero = () => {
             whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(255, 92, 94, 0.2)" }}
             whileTap={{ scale: 0.95 }}
             onClick={() => document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })}
-            className="relative px-8 py-4 bg-gradient-to-r from-primary-400 to-primary-500 text-white text-lg font-bold shadow-2xl overflow-hidden group"
+            className="relative px-8 py-4 bg-gradient-to-r from-primary-400 to-primary-500 text-white text-lg font-bold shadow-2xl overflow-hidden group rounded-lg"
           >
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-primary-300 to-primary-600"
+              className="absolute inset-0 bg-gradient-to-r from-primary-500 to-primary-600"
               initial={{ x: "-100%" }}
               whileHover={{ x: "0%" }}
               transition={{ duration: 0.3 }}
@@ -327,7 +323,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.08)" }}
             whileTap={{ scale: 0.95 }}
             onClick={() => document.querySelector('#research').scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-4 border-2 border-white/20 text-white text-lg font-semibold backdrop-blur-sm hover:border-white/40 transition-all duration-300"
+            className="px-8 py-4 border-2 border-white/20 text-white text-lg font-semibold backdrop-blur-sm hover:border-white/40 transition-all duration-300 rounded-lg"
           >
             Explore Research
           </motion.button>
@@ -338,18 +334,19 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 2.8 }}
-          className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
+          className="absolute left-1/2 transform -translate-x-1/2"
+          style={{bottom: '-12px', marginTop: '10px'}}
         >
           <motion.button
             onClick={scrollToNext}
             animate={{ y: [0, 15, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center space-y-3 text-gray-300 hover:text-white transition-colors duration-300 group"
+            className="flex flex-col items-center space-y-0 text-gray-300 hover:text-white transition-colors duration-300 group"
           >
             <span className="text-sm font-medium">Discover More</span>
             <motion.div
               whileHover={{ scale: 1.2 }}
-              className="w-12 h-12 border-2 border-white/20 flex items-center justify-center group-hover:border-white/50 transition-colors"
+              className="w-12 h-12 border-0 border-white/20 flex items-center justify-center group-hover:border-white/50 transition-colors"
             >
               <ChevronDown className="w-6 h-6" />
             </motion.div>

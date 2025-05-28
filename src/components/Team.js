@@ -55,7 +55,7 @@ const Team = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 cosmic-text">
             Leadership Team
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl max-w-3xl mx-auto" style={{ color: '#FFF9F0' }}>
             Meet the dedicated leaders driving Penn Bioastronautics forward in our mission to advance space biology research and education.
           </p>
         </motion.div>
@@ -88,10 +88,10 @@ const Team = () => {
                 />
               </div>
               
-              <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
+              <h3 className="text-xl font-bold mb-2" style={{ color: '#FFE4BE' }}>{member.name}</h3>
               <p className="text-primary-400 font-semibold mb-1">{member.position}</p>
-              <p className="text-gray-400 text-sm mb-1">Class of {member.year}</p>
-              <p className="text-gray-300 text-sm mb-4 leading-relaxed">{member.bio}</p>
+              <p className="text-sm mb-1" style={{ color: '#FFE4BE' }}>Class of {member.year}</p>
+              <p className="text-sm mb-4 leading-relaxed" style={{ color: '#FFF9F0' }}>{member.bio}</p>
               
               <div className="flex justify-center space-x-3">
                 <motion.a
@@ -126,8 +126,8 @@ const Team = () => {
           className="text-center"
         >
           <div className="glass-card p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">Join Our Team</h3>
-            <p className="text-gray-300 mb-6">
+            <h3 className="text-2xl font-bold mb-4" style={{ color: '#FFE4BE' }}>Join Our Team</h3>
+            <p className="mb-6" style={{ color: '#FFF9F0' }}>
               Interested in contributing to the future of space biology? We're always looking for passionate students to join our mission.
             </p>
             <motion.button
@@ -149,7 +149,7 @@ const Team = () => {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <h4 className="text-lg font-semibold text-white mb-4">Follow Our Journey</h4>
+          <h4 className="text-lg font-semibold mb-4" style={{ color: '#FFE4BE' }}>Follow Our Journey</h4>
           <motion.a
             href="https://www.instagram.com/upenn_bioastronautics/"
             target="_blank"

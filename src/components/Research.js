@@ -169,7 +169,7 @@ const Research = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 cosmic-text">
             Research Network & Collaborations
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl max-w-3xl mx-auto" style={{ color: '#FFF9F0' }}>
             Connect with our extensive network of researchers, labs, and institutions advancing space biology and bioastronautics research.
           </p>
         </motion.div>
@@ -191,9 +191,9 @@ const Research = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-4 py-3 flex items-center space-x-2 transition-all duration-300 ${
+                  className={`px-4 py-3 flex items-center space-x-2 rounded-lg transition-all duration-300 ${
                     activeTab === tab.id
-                      ? 'bg-gradient-to-r from-primary-500 to-tertiary-500 text-white'
+                      ? 'bg-white/10 text-white'
                       : 'text-gray-300 hover:text-white hover:bg-white/5'
                   }`}
                 >
@@ -225,16 +225,16 @@ const Research = () => {
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
-                    <h3 className="text-lg font-bold text-white mb-1">{contact.name}</h3>
+                    <h3 className="text-lg font-bold mb-1" style={{ color: '#FFE4BE' }}>{contact.name}</h3>
                     <p className="text-primary-400 font-semibold text-sm mb-1">{contact.role}</p>
-                    <p className="text-gray-400 text-sm">{contact.organization}</p>
+                    <p className="text-sm" style={{ color: '#FFE4BE' }}>{contact.organization}</p>
                   </div>
                   <div className="w-12 h-12 bg-gradient-to-r from-primary-500/20 to-tertiary-500/20 flex items-center justify-center">
-                    <Building className="w-6 h-6 text-primary-400" />
+                    <Building className="w-6 h-6" style={{ color: '#FFE4BE' }} />
                   </div>
                 </div>
 
-                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                <p className="text-sm mb-4 leading-relaxed" style={{ color: '#FFE4BE' }}>
                   {contact.description}
                 </p>
 
@@ -251,6 +251,7 @@ const Research = () => {
                     href={`mailto:${contact.email}`}
                     whileHover={{ scale: 1.02 }}
                     className="flex items-center space-x-2 text-gray-300 hover:text-primary-300 transition-colors duration-200 text-sm"
+                    style={{ color: '#FFE4BE' }}
                   >
                     <Mail className="w-4 h-4" />
                     <span className="truncate">{contact.email}</span>
@@ -261,6 +262,7 @@ const Research = () => {
                       href={`mailto:${contact.altEmail}`}
                       whileHover={{ scale: 1.02 }}
                       className="flex items-center space-x-2 text-gray-300 hover:text-primary-300 transition-colors duration-200 text-sm"
+                      style={{ color: '#FFE4BE' }}
                     >
                       <Mail className="w-4 h-4" />
                       <span className="truncate">{contact.altEmail}</span>
@@ -268,7 +270,7 @@ const Research = () => {
                   )}
                   
                   {contact.phone && (
-                    <div className="flex items-center space-x-2 text-gray-400 text-sm">
+                    <div className="flex items-center space-x-2 text-gray-400 text-sm" style={{ color: '#FFE4BE' }}>
                       <span className="w-4 h-4 text-center">📞</span>
                       <span>{contact.phone}</span>
                     </div>
@@ -288,8 +290,8 @@ const Research = () => {
           className="text-center mt-16"
         >
           <div className="glass-card p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">Join Our Research Network</h3>
-            <p className="text-gray-300 mb-6">
+            <h3 className="text-2xl font-bold mb-4" style={{ color: '#FFE4BE' }}>Join Our Research Network</h3>
+            <p className="mb-6" style={{ color: '#FFF9F0' }}>
               Interested in collaborating or contributing to bioastronautics research? 
               Connect with our team to explore opportunities.
             </p>

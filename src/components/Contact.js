@@ -6,9 +6,6 @@ import {
   MessageSquare, 
   Users, 
   Instagram, 
-  Twitter, 
-  Linkedin, 
-  Github,
   Send,
   MapPin,
   Phone
@@ -45,21 +42,21 @@ const Contact = () => {
       title: "Membership Inquiries",
       description: "Join our community of space biology enthusiasts",
       icon: Users,
-      email: "join@pennbioastro.org",
+      email: "pennbioastronautics@gmail.com",
       color: "from-primary-500 to-primary-600"
     },
     {
       title: "Research Collaboration",
       description: "Partner with us on cutting-edge research projects",
       icon: MessageSquare,
-      email: "research@pennbioastro.org",
+      email: "pennbioastronautics@gmail.com",
       color: "from-tertiary-500 to-tertiary-600"
     },
     {
       title: "General Inquiries",
       description: "Questions about our organization or events",
       icon: Mail,
-      email: "info@pennbioastro.org",
+      email: "pennbioastronautics@gmail.com",
       color: "from-secondary-600 to-secondary-700"
     }
   ];
@@ -68,26 +65,8 @@ const Contact = () => {
     {
       name: "Instagram",
       icon: Instagram,
-      url: "https://instagram.com/pennbioastro",
+      url: "https://www.instagram.com/upenn_bioastronautics/",
       color: "hover:text-pink-400"
-    },
-    {
-      name: "Twitter",
-      icon: Twitter,
-      url: "https://twitter.com/pennbioastro",
-      color: "hover:text-blue-400"
-    },
-    {
-      name: "LinkedIn",
-      icon: Linkedin,
-      url: "https://linkedin.com/company/pennbioastro",
-      color: "hover:text-blue-600"
-    },
-    {
-      name: "GitHub",
-      icon: Github,
-      url: "https://github.com/pennbioastro",
-      color: "hover:text-gray-300"
     }
   ];
 
@@ -131,7 +110,8 @@ const Contact = () => {
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl max-w-3xl mx-auto leading-relaxed"
+            style={{ color: '#FFF9F0' }}
           >
             Ready to join our mission? Whether you're interested in membership, 
             research collaboration, or partnerships, we'd love to hear from you.
@@ -149,7 +129,7 @@ const Contact = () => {
               <h3 className="text-2xl font-bold mb-6 cosmic-text">Send us a Message</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium mb-2" style={{ color: '#FFE4BE' }}>
                     Full Name
                   </label>
                   <input
@@ -165,7 +145,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium mb-2" style={{ color: '#FFE4BE' }}>
                     Email Address
                   </label>
                   <input
@@ -181,7 +161,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="type" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="type" className="block text-sm font-medium mb-2" style={{ color: '#FFE4BE' }}>
                     Inquiry Type
                   </label>
                   <select
@@ -200,7 +180,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium mb-2" style={{ color: '#FFE4BE' }}>
                     Message
                   </label>
                   <textarea
@@ -249,8 +229,8 @@ const Contact = () => {
                       <method.icon className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-lg font-semibold text-white mb-2">{method.title}</h4>
-                      <p className="text-gray-300 text-sm mb-3">{method.description}</p>
+                      <h4 className="text-lg font-semibold mb-2" style={{ color: '#FFE4BE' }}>{method.title}</h4>
+                      <p className="text-sm mb-3" style={{ color: '#FFF9F0' }}>{method.description}</p>
                       <a
                         href={`mailto:${method.email}`}
                         className="text-primary-400 hover:text-primary-300 text-sm font-medium transition-colors duration-200"
@@ -268,19 +248,19 @@ const Contact = () => {
               variants={itemVariants}
               className="glass-card p-6"
             >
-              <h4 className="text-lg font-semibold text-white mb-4">Visit Us</h4>
+              <h4 className="text-lg font-semibold mb-4" style={{ color: '#FFE4BE' }}>Visit Us</h4>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-primary-400" />
-                  <span className="text-gray-300">
+                  <MapPin className="w-5 h-5" style={{ color: '#FFE4BE' }} />
+                  <span style={{ color: '#FFF9F0' }}>
                     University of Pennsylvania<br />
                     School of Engineering and Applied Science<br />
                     Philadelphia, PA 19104
                   </span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-primary-400" />
-                  <span className="text-gray-300">(215) 898-8000</span>
+                  <Phone className="w-5 h-5" style={{ color: '#FFE4BE' }} />
+                  <span style={{ color: '#FFF9F0' }}>(215) 898-8000</span>
                 </div>
               </div>
             </motion.div>
@@ -290,7 +270,7 @@ const Contact = () => {
               variants={itemVariants}
               className="glass-card p-6"
             >
-              <h4 className="text-lg font-semibold text-white mb-4">Follow Us</h4>
+              <h4 className="text-lg font-semibold mb-4" style={{ color: '#FFE4BE' }}>Follow Us</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -306,7 +286,7 @@ const Contact = () => {
                   </motion.a>
                 ))}
               </div>
-              <p className="text-gray-400 text-sm mt-4">
+              <p className="text-sm mt-4" style={{ color: '#FFF9F0' }}>
                 Stay updated with our latest research, events, and opportunities.
               </p>
             </motion.div>
@@ -316,8 +296,8 @@ const Contact = () => {
               variants={itemVariants}
               className="glass-card p-6"
             >
-              <h4 className="text-lg font-semibold text-white mb-4">Newsletter</h4>
-              <p className="text-gray-300 text-sm mb-4">
+              <h4 className="text-lg font-semibold mb-4" style={{ color: '#FFE4BE' }}>Newsletter</h4>
+              <p className="text-sm mb-4" style={{ color: '#FFF9F0' }}>
                 Get monthly updates on our research, events, and opportunities.
               </p>
               <div className="flex space-x-2">
@@ -347,7 +327,7 @@ const Contact = () => {
         >
           <div className="glass-card p-8 max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold mb-4 cosmic-text">Partnership Opportunities</h3>
-            <p className="text-gray-300 mb-6">
+            <p className="mb-6" style={{ color: '#FFF9F0' }}>
               We're always looking for industry partners, research institutions, and organizations 
               that share our passion for advancing space biology. Let's collaborate to push the 
               boundaries of human space exploration.

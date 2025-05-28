@@ -221,25 +221,26 @@ const Resources = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 href={item.link}
-                className="text-gray-400 hover:text-white transition-colors duration-200"
+                className="transition-colors duration-200"
+                style={{ color: '#FFE4BE' }}
               >
                 <ExternalLink className="w-5 h-5" />
               </motion.a>
             </div>
 
-            <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-            <p className="text-gray-300 leading-relaxed mb-4">{item.description}</p>
+            <h3 className="text-xl font-bold mb-3" style={{ color: '#FFE4BE' }}>{item.title}</h3>
+            <p className="leading-relaxed mb-4" style={{ color: '#FFF9F0' }}>{item.description}</p>
 
             <div className="space-y-2">
               {activeTab === 'career' && (
                 <>
                   <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">Type:</span>
-                    <span className="text-white">{item.type}</span>
+                    <span style={{ color: '#FFE4BE' }}>Type:</span>
+                    <span style={{ color: '#FFF9F0' }}>{item.type}</span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">Deadline:</span>
-                    <span className="text-white">{item.deadline}</span>
+                    <span style={{ color: '#FFE4BE' }}>Deadline:</span>
+                    <span style={{ color: '#FFF9F0' }}>{item.deadline}</span>
                   </div>
                 </>
               )}
@@ -247,16 +248,16 @@ const Resources = () => {
               {activeTab === 'funding' && (
                 <>
                   <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">Amount:</span>
-                    <span className="text-white">{item.amount}</span>
+                    <span style={{ color: '#FFE4BE' }}>Amount:</span>
+                    <span style={{ color: '#FFE4BE' }}>{item.amount}</span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">Eligibility:</span>
-                    <span className="text-white">{item.eligibility}</span>
+                    <span style={{ color: '#FFE4BE' }}>Eligibility:</span>
+                    <span style={{ color: '#FFE4BE' }}>{item.eligibility}</span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">Deadline:</span>
-                    <span className="text-white">{item.deadline}</span>
+                    <span style={{ color: '#FFE4BE' }}>Deadline:</span>
+                    <span style={{ color: '#FFE4BE' }}>{item.deadline}</span>
                   </div>
                 </>
               )}
@@ -264,15 +265,15 @@ const Resources = () => {
               {activeTab === 'learning' && (
                 <>
                   <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">Duration:</span>
-                    <span className="text-white">{item.duration}</span>
+                    <span style={{ color: '#FFE4BE' }}>Duration:</span>
+                    <span style={{ color: '#FFE4BE' }}>{item.duration}</span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">Level:</span>
-                    <span className="text-white">{item.level}</span>
+                    <span style={{ color: '#FFE4BE' }}>Level:</span>
+                    <span style={{ color: '#FFE4BE' }}>{item.level}</span>
                   </div>
                   <div className="mt-3">
-                    <span className="text-gray-400 text-sm">Courses:</span>
+                    <span className="text-sm" style={{ color: '#FFE4BE' }}>Courses:</span>
                     <div className="flex flex-wrap gap-2 mt-1">
                       {item.courses?.map((course, idx) => (
                         <span key={idx} className="bg-space-500/20 text-space-400 px-2 py-1 rounded text-xs">
@@ -287,12 +288,12 @@ const Resources = () => {
               {activeTab === 'github' && (
                 <>
                   <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">Stars:</span>
-                    <span className="text-white">{item.stars}</span>
+                    <span style={{ color: '#FFE4BE' }}>Stars:</span>
+                    <span style={{ color: '#FFE4BE' }}>{item.stars}</span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">Language:</span>
-                    <span className="text-white">{item.language}</span>
+                    <span style={{ color: '#FFE4BE' }}>Language:</span>
+                    <span style={{ color: '#FFE4BE' }}>{item.language}</span>
                   </div>
                 </>
               )}
@@ -321,7 +322,8 @@ const Resources = () => {
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl max-w-3xl mx-auto leading-relaxed"
+            style={{ color: '#FFF9F0' }}
           >
             Discover career opportunities, funding sources, learning paths, and tools 
             to advance your journey in bioastronautics and space biology.
@@ -377,7 +379,7 @@ const Resources = () => {
         >
           <div className="glass-card p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold mb-4 cosmic-text">Need More Information?</h3>
-            <p className="text-gray-300 mb-6">
+            <p className="mb-6" style={{ color: '#FFF9F0' }}>
               Can't find what you're looking for? Our team is here to help you 
               navigate opportunities in bioastronautics and space biology.
             </p>

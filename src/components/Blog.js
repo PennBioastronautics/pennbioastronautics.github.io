@@ -93,7 +93,7 @@ const Updates = () => {
             >
               <RefreshCw className="w-8 h-8 text-primary-400" />
             </motion.div>
-            <p className="text-gray-300 mt-4">Loading latest updates...</p>
+            <p className="mt-4" style={{ color: '#FFE4BE' }}>Loading latest updates...</p>
           </div>
         </div>
       </section>
@@ -110,7 +110,7 @@ const Updates = () => {
               onClick={refreshPosts}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center space-x-2 bg-primary-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-primary-600 transition-colors duration-300"
+              className="inline-flex items-center space-x-2 bg-primary-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-600 transition-colors duration-300"
             >
               <RefreshCw className="w-4 h-4" />
               <span>Try Again</span>
@@ -134,7 +134,7 @@ const Updates = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 cosmic-text">
             Latest Updates
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-xl max-w-3xl mx-auto mb-8" style={{ color: '#FFF9F0' }}>
             Follow our journey in space biology research, behind-the-scenes moments, 
             and the latest updates from Penn Bioastronautics.
           </p>
@@ -196,17 +196,17 @@ const Updates = () => {
                     <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center">
                       <Instagram className="w-4 h-4 text-white" />
                     </div>
-                    <span className="font-semibold text-white text-sm">upenn_bioastronautics</span>
+                    <span className="font-semibold text-sm" style={{ color: '#FFE4BE' }}>upenn_bioastronautics</span>
                   </div>
-                  <span className="text-gray-400 text-xs">{post.timestamp}</span>
+                  <span className="text-xs" style={{ color: '#FFE4BE' }}>{post.timestamp}</span>
                 </div>
 
-                <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
+                <p className="text-sm leading-relaxed line-clamp-3" style={{ color: '#FFE4BE' }}>
                   {post.caption}
                 </p>
 
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-4 text-gray-400">
+                  <div className="flex items-center space-x-4" style={{ color: '#FFE4BE' }}>
                     <div className="flex items-center space-x-1">
                       <Heart className="w-4 h-4" />
                       <span className="text-xs">{post.likes}</span>
@@ -247,8 +247,8 @@ const Updates = () => {
                 <Instagram className="w-8 h-8 text-white" />
               </div>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4">Stay Connected</h3>
-            <p className="text-gray-300 mb-6">
+            <h3 className="text-2xl font-bold mb-4" style={{ color: '#FFE4BE' }}>Stay Connected</h3>
+            <p className="mb-6" style={{ color: '#FFF9F0' }}>
               Don't miss out on our latest research updates, behind-the-scenes content, 
               and space biology discoveries. Follow us on Instagram for daily insights!
             </p>

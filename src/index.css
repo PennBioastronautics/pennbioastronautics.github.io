@@ -2,19 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Font Faces - Add your local fonts here */
+@font-face {
+  font-family: 'Radion';
+  src: url('./assets/fonts/Radion.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
 @layer base {
   * {
     @apply border-gray-200;
   }
   
   body {
-    @apply bg-gray-900 text-white font-sans;
+    @apply bg-gray-900 font-sans;
     font-family: 'Inter', sans-serif;
     background: linear-gradient(135deg, #111827 0%, #1f2937 25%, #0E2540 75%, #05488A 100%);
+    color: #FFF9F0;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Radion', 'Space Grotesk', sans-serif;
+    color: #FFE4BE;
+  }
+  
+  p, span, div, a, li, td, th {
+    color: #FFF9F0;
   }
 }
 
@@ -24,11 +41,17 @@
   }
   
   .space-button {
-    @apply bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-primary-500/25;
+    @apply bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-primary-500/25;
   }
   
   .cosmic-text {
-    @apply bg-gradient-to-r from-primary-500 via-tertiary-500 to-primary-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary-500 to-tertiary-500 bg-clip-text text-transparent;
+    font-family: 'Radion', 'Space Grotesk', sans-serif;
+  }
+  
+  .custom-title {
+    font-family: 'Radion', 'Space Grotesk', sans-serif;
+    color: #FFE4BE;
   }
   
   .star-field {
@@ -43,7 +66,7 @@
   
   .star {
     position: absolute;
-    background: white;
+    background: #FFF9F0;
     border-radius: 50%;
     animation: twinkle 2s ease-in-out infinite alternate;
   }
@@ -71,7 +94,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(14, 37, 64, 0.3);
+  background: #FFE4BE;
 }
 
 ::-webkit-scrollbar-thumb {

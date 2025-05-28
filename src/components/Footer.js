@@ -75,22 +75,22 @@ const Footer = () => {
               />
               <div>
                 <h3 className="text-xl font-bold cosmic-text">Penn Bioastronautics</h3>
-                <p className="text-sm text-gray-400">Biology for Space</p>
+                <p className="text-sm" style={{ color: '#FFE4BE' }}>Biology for Space</p>
               </div>
             </motion.div>
-            <p className="text-gray-300 text-sm leading-relaxed mb-6">
+            <p className="text-sm leading-relaxed mb-6" style={{ color: '#FFF9F0' }}>
               Advancing the frontiers of space biology and preparing the next generation 
               of researchers for humanity's expansion into the cosmos.
             </p>
             <div className="space-y-2">
-              <div className="flex items-center space-x-2 text-sm text-gray-400">
-                <MapPin className="w-4 h-4" />
-                <span>University of Pennsylvania</span>
+              <div className="flex items-center space-x-2 text-sm" style={{ color: '#FFE4BE' }}>
+                <MapPin className="w-4 h-4" style={{ color: '#FFE4BE' }} />
+                <span style={{ color: '#FFE4BE' }}>University of Pennsylvania</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-gray-400">
-                <Mail className="w-4 h-4" />
-                <a href="mailto:info@pennbioastro.org" className="hover:text-white transition-colors duration-200">
-                  info@pennbioastro.org
+              <div className="flex items-center space-x-2 text-sm" style={{ color: '#FFE4BE' }}>
+                <Mail className="w-4 h-4" style={{ color: '#FFE4BE' }} />
+                <a href="mailto:pennbioastronautics@gmail.com" className="hover:text-white transition-colors duration-200" style={{ color: '#FFE4BE' }}>
+                  pennbioastronautics@gmail.com
                 </a>
               </div>
             </div>
@@ -98,7 +98,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-6">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-6" style={{ color: '#FFE4BE' }}>Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -106,6 +106,7 @@ const Footer = () => {
                     whileHover={{ x: 5 }}
                     onClick={() => scrollToSection(link.href)}
                     className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                    style={{ color: '#FFF9F0' }}
                   >
                     {link.name}
                   </motion.button>
@@ -116,7 +117,7 @@ const Footer = () => {
 
           {/* Resources */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-6">Resources</h4>
+            <h4 className="text-lg font-semibold mb-6" style={{ color: '#FFE4BE' }}>Resources</h4>
             <ul className="space-y-3">
               {resources.map((resource, index) => (
                 <li key={index}>
@@ -124,8 +125,9 @@ const Footer = () => {
                     whileHover={{ x: 5 }}
                     onClick={() => scrollToSection(resource.href)}
                     className="text-gray-400 hover:text-white transition-colors duration-200 text-sm flex items-center space-x-1"
+                    style={{ color: '#FFF9F0' }}
                   >
-                    <span>{resource.name}</span>
+                    <span style={{ color: '#FFF9F0' }}>{resource.name}</span>
                     {!resource.href.startsWith('#') && <ExternalLink className="w-3 h-3" />}
                   </motion.button>
                 </li>
@@ -135,7 +137,7 @@ const Footer = () => {
 
           {/* Partners & Social */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-6">Partners</h4>
+            <h4 className="text-lg font-semibold mb-6" style={{ color: '#FFE4BE' }}>Partners</h4>
             <ul className="space-y-3 mb-8">
               {partners.map((partner, index) => (
                 <li key={index}>
@@ -145,15 +147,16 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-white transition-colors duration-200 text-sm flex items-center space-x-1"
+                    style={{ color: '#FFF9F0' }}
                   >
-                    <span>{partner.name}</span>
+                    <span style={{ color: '#FFF9F0' }}>{partner.name}</span>
                     <ExternalLink className="w-3 h-3" />
                   </motion.a>
                 </li>
               ))}
             </ul>
 
-            <h4 className="text-lg font-semibold text-white mb-4">Follow Us</h4>
+            <h4 className="text-lg font-semibold mb-4" style={{ color: '#FFE4BE' }}>Follow Us</h4>
             <div className="flex space-x-3">
               {socialLinks.map((social, index) => (
                 <motion.a
@@ -175,8 +178,8 @@ const Footer = () => {
         {/* Newsletter Signup */}
         <div className="mt-12 pt-8 border-t border-white/10">
           <div className="text-center">
-            <h4 className="text-xl font-semibold text-white mb-4">Stay Connected</h4>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <h4 className="text-xl font-semibold mb-4" style={{ color: '#FFE4BE' }}>Stay Connected</h4>
+            <p className="mb-6 max-w-2xl mx-auto" style={{ color: '#FFF9F0' }}>
               Subscribe to our newsletter for the latest research updates, event announcements, 
               and opportunities in bioastronautics.
             </p>
@@ -199,17 +202,17 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
+          <p className="text-sm" style={{ color: '#FFE4BE' }}>
             © 2024 Penn Bioastronautics. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+            <a href="#" className="hover:text-white text-sm transition-colors duration-200" style={{ color: '#FFE4BE' }}>
               Privacy Policy
             </a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+            <a href="#" className="hover:text-white text-sm transition-colors duration-200" style={{ color: '#FFE4BE' }}>
               Terms of Service
             </a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+            <a href="#" className="hover:text-white text-sm transition-colors duration-200" style={{ color: '#FFE4BE' }}>
               Code of Conduct
             </a>
           </div>
