@@ -9,7 +9,7 @@ const Team = () => {
       position: "Administrator",
       email: "ssmith7@sas.upenn.edu",
       year: "2026",
-      image: "/images/profile/samantha.jpg",
+      image: "/images/profile/samatha.jpeg",
       linkedin: null,
       bio: "Leading Penn Bioastronautics with a passion for space biology research and organizational excellence."
     },
@@ -18,7 +18,7 @@ const Team = () => {
       position: "Director",
       email: "subug@seas.upenn.edu",
       year: "2027",
-      image: "/images/profile/shambhabi.jpg",
+      image: "/images/profile/shambhabi.jpeg",
       linkedin: "https://www.linkedin.com/in/shambhabigautam",
       bio: "Directing research initiatives and fostering collaboration between students and faculty in bioastronautics."
     },
@@ -27,7 +27,7 @@ const Team = () => {
       position: "Vice Administrator",
       email: "hartyn@seas.upenn.edu",
       year: "2027",
-      image: "/images/profile/nick.jpg",
+      image: "/images/profile/nick.jpeg",
       linkedin: "https://linkedin.com/in/nicksheaharty",
       bio: "Supporting administrative operations and driving technological innovation in space biology."
     },
@@ -36,7 +36,7 @@ const Team = () => {
       position: "Vice Director",
       email: "julianh2@sas.upenn.edu",
       year: "2027",
-      image: "/images/profile/julian.jpg",
+      image: "/images/profile/julian.jpeg",
       linkedin: "https://www.linkedin.com/in/julian-huang-0a6825279/",
       bio: "Assisting in research coordination and expanding our network of academic partnerships."
     }
