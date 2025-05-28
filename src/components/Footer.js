@@ -69,7 +69,7 @@ const Footer = () => {
               className="flex items-center space-x-3 mb-6"
             >
               <img 
-                src="/images/shortlogo.png" 
+                src={`${process.env.PUBLIC_URL}/images/shortlogo.png`}
                 alt="Penn Bioastronautics" 
                 className="h-12 w-12"
               />

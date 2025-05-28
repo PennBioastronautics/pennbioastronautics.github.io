@@ -9,7 +9,7 @@ const Team = () => {
       position: "Administrator",
       email: "ssmith7@sas.upenn.edu",
       year: "2026",
-      image: "/images/profile/samatha.jpeg",
+      image: `${process.env.PUBLIC_URL}/images/profile/samatha.jpeg`,
       linkedin: null,
       bio: "Leading Penn Bioastronautics with a passion for space biology research and organizational excellence."
     },
@@ -18,7 +18,7 @@ const Team = () => {
       position: "Director",
       email: "subug@seas.upenn.edu",
       year: "2027",
-      image: "/images/profile/shambhabi.jpeg",
+      image: `${process.env.PUBLIC_URL}/images/profile/shambhabi.jpeg`,
       linkedin: "https://www.linkedin.com/in/shambhabigautam",
       bio: "Directing research initiatives and fostering collaboration between students and faculty in bioastronautics."
     },
@@ -27,7 +27,7 @@ const Team = () => {
       position: "Vice Administrator",
       email: "hartyn@seas.upenn.edu",
       year: "2027",
-      image: "/images/profile/nick.jpeg",
+      image: `${process.env.PUBLIC_URL}/images/profile/nick.jpeg`,
       linkedin: "https://linkedin.com/in/nicksheaharty",
       bio: "Supporting administrative operations and driving technological innovation in space biology."
     },
@@ -36,7 +36,7 @@ const Team = () => {
       position: "Vice Director",
       email: "julianh2@sas.upenn.edu",
       year: "2027",
-      image: "/images/profile/julian.jpeg",
+      image: `${process.env.PUBLIC_URL}/images/profile/julian.jpeg`,
       linkedin: "https://www.linkedin.com/in/julian-huang-0a6825279/",
       bio: "Assisting in research coordination and expanding our network of academic partnerships."
     }
@@ -71,7 +71,7 @@ const Team = () => {
               className="glass-card p-6 text-center group hover:bg-white/10 transition-all duration-300"
             >
               <div className="relative mb-6">
-                <div className="w-32 h-32 mx-auto overflow-hidden border-4 border-gradient-to-r from-primary-500 to-tertiary-500 group-hover:shadow-lg group-hover:shadow-primary-500/25 transition-all duration-300">
+                <div className="w-32 h-32 mx-auto overflow-hidden rounded-full border-2 border-white/20 group-hover:border-primary-400/40 group-hover:shadow-lg group-hover:shadow-primary-500/25 transition-all duration-300">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -84,7 +84,7 @@ const Team = () => {
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="absolute -top-2 -right-2 w-6 h-6 border border-tertiary-400/30"
+                  className="absolute -top-2 -right-2 w-6 h-6 border border-tertiary-400/30 rounded-full"
                 />
               </div>
               
@@ -97,7 +97,7 @@ const Team = () => {
                 <motion.a
                   href={`mailto:${member.email}`}
                   whileHover={{ scale: 1.1 }}
-                  className="w-8 h-8 bg-gradient-to-r from-primary-500 to-primary-600 flex items-center justify-center hover:shadow-lg hover:shadow-primary-500/25 transition-all duration-300"
+                  className="w-8 h-8 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full flex items-center justify-center hover:shadow-lg hover:shadow-primary-500/25 transition-all duration-300"
                 >
                   <Mail className="w-4 h-4 text-white" />
                 </motion.a>
@@ -107,7 +107,7 @@ const Team = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1 }}
-                    className="w-8 h-8 bg-gradient-to-r from-tertiary-500 to-tertiary-600 flex items-center justify-center hover:shadow-lg hover:shadow-tertiary-500/25 transition-all duration-300"
+                    className="w-8 h-8 bg-gradient-to-r from-tertiary-500 to-tertiary-600 rounded-full flex items-center justify-center hover:shadow-lg hover:shadow-tertiary-500/25 transition-all duration-300"
                   >
                     <Linkedin className="w-4 h-4 text-white" />
                   </motion.a>

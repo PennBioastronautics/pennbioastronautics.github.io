@@ -168,7 +168,7 @@ const Hero = () => {
           className="mb-12 perspective-1000"
         >
           <motion.img
-            src="/images/shortlogo.png"
+            src={`${process.env.PUBLIC_URL}/images/shortlogo.png`}
             alt="Penn Bioastronautics Logo"
             className="w-32 h-32 mx-auto mb-8"
             initial={{ opacity: 0, scale: 0.5, rotateY: 180 }}

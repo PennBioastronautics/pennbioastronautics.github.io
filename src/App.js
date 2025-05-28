@@ -5,7 +5,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Team from './components/Team';
 import Research from './components/Research';
-import Blog from './components/Blog';
+import Updates from './components/Blog';
 import Resources from './components/Resources';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -25,7 +25,7 @@ function App() {
         <About />
         <Team />
         <Research />
-        <Blog />
+        <Updates />
         <Resources />
         <Contact />
       </main>
