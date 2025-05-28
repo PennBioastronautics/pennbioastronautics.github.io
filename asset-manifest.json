@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Penn-Bioastro/static/css/main.d1a5f0de.css",
+    "main.js": "/Penn-Bioastro/static/js/main.954494b4.js",
+    "index.html": "/Penn-Bioastro/index.html",
+    "main.d1a5f0de.css.map": "/Penn-Bioastro/static/css/main.d1a5f0de.css.map",
+    "main.954494b4.js.map": "/Penn-Bioastro/static/js/main.954494b4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d1a5f0de.css",
+    "static/js/main.954494b4.js"
+  ]
+}
