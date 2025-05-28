@@ -1,206 +1,134 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Linkedin, Mail, Github } from 'lucide-react';
+import { Mail, Linkedin, Instagram, ExternalLink } from 'lucide-react';
 
 const Team = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  const executives = [
+  const teamMembers = [
     {
-      name: "Sarah Chen",
-      position: "President",
-      major: "Bioengineering",
-      year: "Senior",
-      bio: "Leading our mission to advance space biology research and foster interdisciplinary collaboration.",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
-      linkedin: "#",
-      email: "sarah@pennbioastro.org",
-      github: "#"
+      name: "Samantha Smith",
+      position: "Administrator",
+      email: "ssmith7@sas.upenn.edu",
+      year: "2026",
+      image: "/images/profile/samantha.jpg",
+      linkedin: null,
+      bio: "Leading Penn Bioastronautics with a passion for space biology research and organizational excellence."
     },
     {
-      name: "Marcus Rodriguez",
-      position: "Vice President",
-      major: "Systems Engineering",
-      year: "Junior",
-      bio: "Coordinating research initiatives and building partnerships with industry leaders.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-      linkedin: "#",
-      email: "marcus@pennbioastro.org",
-      github: "#"
+      name: "Shambhabi Gautam",
+      position: "Director",
+      email: "subug@seas.upenn.edu",
+      year: "2027",
+      image: "/images/profile/shambhabi.jpg",
+      linkedin: "https://www.linkedin.com/in/shambhabigautam",
+      bio: "Directing research initiatives and fostering collaboration between students and faculty in bioastronautics."
     },
     {
-      name: "Dr. Emily Watson",
-      position: "Faculty Advisor",
-      major: "Bioengineering Department",
-      year: "Professor",
-      bio: "Guiding our research direction with expertise in space medicine and human factors.",
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop&crop=face",
-      linkedin: "#",
-      email: "ewatson@seas.upenn.edu",
-      github: "#"
+      name: "Nick Harty",
+      position: "Vice Administrator",
+      email: "hartyn@seas.upenn.edu",
+      year: "2027",
+      image: "/images/profile/nick.jpg",
+      linkedin: "https://linkedin.com/in/nicksheaharty",
+      bio: "Supporting administrative operations and driving technological innovation in space biology."
     },
     {
-      name: "Alex Kim",
-      position: "Research Director",
-      major: "Bioengineering",
-      year: "Graduate Student",
-      bio: "Overseeing student research projects and coordinating with Penn labs.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-      linkedin: "#",
-      email: "alex@pennbioastro.org",
-      github: "#"
-    },
-    {
-      name: "Maya Patel",
-      position: "Outreach Coordinator",
-      major: "Biology",
-      year: "Sophomore",
-      bio: "Organizing events, workshops, and community engagement initiatives.",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-      linkedin: "#",
-      email: "maya@pennbioastro.org",
-      github: "#"
-    },
-    {
-      name: "James Thompson",
-      position: "Technology Lead",
-      major: "Computer Science",
-      year: "Junior",
-      bio: "Developing digital platforms and managing our technical infrastructure.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
-      linkedin: "#",
-      email: "james@pennbioastro.org",
-      github: "#"
+      name: "Julian Huang",
+      position: "Vice Director",
+      email: "julianh2@sas.upenn.edu",
+      year: "2027",
+      image: "/images/profile/julian.jpg",
+      linkedin: "https://www.linkedin.com/in/julian-huang-0a6825279/",
+      bio: "Assisting in research coordination and expanding our network of academic partnerships."
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
-    },
-  };
-
   return (
-    <section id="team" className="py-20 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="team" className="py-20 bg-gradient-to-b from-gray-900 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4">
         <motion.div
-          ref={ref}
-          variants={containerVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <motion.h2
-            variants={itemVariants}
-            className="text-4xl md:text-6xl font-bold mb-6"
-          >
-            <span className="cosmic-text">Our</span> Leadership
-          </motion.h2>
-          <motion.p
-            variants={itemVariants}
-            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
-          >
-            Meet the passionate individuals driving Penn Bioastronautics forward, 
-            combining diverse expertise to advance space biology research.
-          </motion.p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 cosmic-text">
+            Leadership Team
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Meet the dedicated leaders driving Penn Bioastronautics forward in our mission to advance space biology research and education.
+          </p>
         </motion.div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {executives.map((member, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {teamMembers.map((member, index) => (
             <motion.div
               key={index}
-              variants={itemVariants}
-              whileHover={{ scale: 1.05, y: -10 }}
-              className="glass-card p-6 group"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="glass-card p-6 text-center group hover:bg-white/10 transition-all duration-300"
             >
               <div className="relative mb-6">
-                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-gradient-to-r from-primary-500 to-tertiary-500 group-hover:shadow-lg group-hover:shadow-primary-500/25 transition-all duration-300">
+                <div className="w-32 h-32 mx-auto overflow-hidden border-4 border-gradient-to-r from-primary-500 to-tertiary-500 group-hover:shadow-lg group-hover:shadow-primary-500/25 transition-all duration-300">
                   <img
                     src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=FF5C5E&color=fff&size=128`;
+                    }}
                   />
                 </div>
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="absolute -top-2 -right-2 w-6 h-6 border border-tertiary-400/30 rounded-full"
+                  className="absolute -top-2 -right-2 w-6 h-6 border border-tertiary-400/30"
                 />
               </div>
-
-              <div className="text-center">
-                <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>
-                <p className="text-primary-400 font-semibold mb-1">{member.position}</p>
-                <p className="text-gray-400 text-sm mb-2">{member.major} • {member.year}</p>
-                <p className="text-gray-300 text-sm leading-relaxed mb-6">{member.bio}</p>
-
-                <div className="flex justify-center space-x-4">
+              
+              <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
+              <p className="text-primary-400 font-semibold mb-1">{member.position}</p>
+              <p className="text-gray-400 text-sm mb-1">Class of {member.year}</p>
+              <p className="text-gray-300 text-sm mb-4 leading-relaxed">{member.bio}</p>
+              
+              <div className="flex justify-center space-x-3">
+                <motion.a
+                  href={`mailto:${member.email}`}
+                  whileHover={{ scale: 1.1 }}
+                  className="w-8 h-8 bg-gradient-to-r from-primary-500 to-primary-600 flex items-center justify-center hover:shadow-lg hover:shadow-primary-500/25 transition-all duration-300"
+                >
+                  <Mail className="w-4 h-4 text-white" />
+                </motion.a>
+                {member.linkedin && (
                   <motion.a
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
                     href={member.linkedin}
-                    className="w-8 h-8 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full flex items-center justify-center hover:shadow-lg hover:shadow-primary-500/25 transition-all duration-300"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1 }}
+                    className="w-8 h-8 bg-gradient-to-r from-tertiary-500 to-tertiary-600 flex items-center justify-center hover:shadow-lg hover:shadow-tertiary-500/25 transition-all duration-300"
                   >
                     <Linkedin className="w-4 h-4 text-white" />
                   </motion.a>
-                  <motion.a
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    href={`mailto:${member.email}`}
-                    className="w-8 h-8 bg-gradient-to-r from-tertiary-500 to-tertiary-600 rounded-full flex items-center justify-center hover:shadow-lg hover:shadow-tertiary-500/25 transition-all duration-300"
-                  >
-                    <Mail className="w-4 h-4 text-white" />
-                  </motion.a>
-                  <motion.a
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    href={member.github}
-                    className="w-8 h-8 bg-gradient-to-r from-secondary-600 to-secondary-700 rounded-full flex items-center justify-center hover:shadow-lg hover:shadow-secondary-600/25 transition-all duration-300"
-                  >
-                    <Github className="w-4 h-4 text-white" />
-                  </motion.a>
-                </div>
+                )}
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
+        {/* Join Team CTA */}
         <motion.div
-          variants={itemVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          className="text-center mt-16"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="text-center"
         >
           <div className="glass-card p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4 cosmic-text">Join Our Team</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Join Our Team</h3>
             <p className="text-gray-300 mb-6">
-              We're always looking for passionate students and researchers to join our mission. 
-              Whether you're interested in leadership, research, or outreach, there's a place for you.
+              Interested in contributing to the future of space biology? We're always looking for passionate students to join our mission.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -208,9 +136,31 @@ const Team = () => {
               onClick={() => document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })}
               className="space-button"
             >
-              Apply to Join
+              Get Involved
             </motion.button>
           </div>
+        </motion.div>
+
+        {/* Social Media */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mt-12"
+        >
+          <h4 className="text-lg font-semibold text-white mb-4">Follow Our Journey</h4>
+          <motion.a
+            href="https://www.instagram.com/upenn_bioastronautics/"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            className="inline-flex items-center space-x-2 text-primary-400 hover:text-primary-300 transition-colors duration-200"
+          >
+            <Instagram className="w-6 h-6" />
+            <span className="font-medium">@upenn_bioastronautics</span>
+            <ExternalLink className="w-4 h-4" />
+          </motion.a>
         </motion.div>
       </div>
     </section>

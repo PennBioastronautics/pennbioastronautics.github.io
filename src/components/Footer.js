@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Instagram, Twitter, Linkedin, Github, ExternalLink } from 'lucide-react';
+import { Mail, MapPin, Instagram, ExternalLink } from 'lucide-react';
 
 const Footer = () => {
   const quickLinks = [
@@ -30,10 +30,7 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/pennbioastro' },
-    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/pennbioastro' },
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/pennbioastro' },
-    { name: 'GitHub', icon: Github, href: 'https://github.com/pennbioastro' }
+    { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/upenn_bioastronautics/' }
   ];
 
   const scrollToSection = (href) => {

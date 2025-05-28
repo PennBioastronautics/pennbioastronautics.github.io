@@ -59,6 +59,10 @@
   .star:nth-child(4n) {
     animation-delay: 1.5s;
   }
+  
+  .perspective-1000 {
+    perspective: 1000px;
+  }
 }
 
 /* Custom scrollbar */
